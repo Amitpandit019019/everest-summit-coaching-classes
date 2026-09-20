@@ -1090,191 +1090,106 @@ href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Cl
 
 <!-- ADMISSION FORM -->
 
-<div class="box">
-
-<h2>
-📝 Admission Form
-</h2>
-
-<form onsubmit="sendAdmission(event)">
-
-<div class="form-grid">
-
-
-<div>
-
-<label>
-Student Full Name *
-</label>
-
-<input
-id="student"
-required
-placeholder="Student name">
-
-</div>
-
-
-<div>
-
-<label>
-Parent / Guardian Name *
-</label>
-
-<input
-id="parent"
-required
-placeholder="Parent / Guardian name">
-
-</div>
-
-
-<div>
-
-<label>
-Mobile Number *
-</label>
-
-<input
-id="phone"
-type="tel"
-required
-placeholder="98XXXXXXXX">
-
-</div>
-
-
-<div>
-
-<label>
-Student's Class *
-</label>
-
-<select
-id="className"
-required>
-
-<option value="">
-Select Class
-</option>
-
-<option>Class 1</option>
-<option>Class 2</option>
-<option>Class 3</option>
-<option>Class 4</option>
-<option>Class 5</option>
-<option>Class 6</option>
-<option>Class 7</option>
-<option>Class 8</option>
-<option>Class 9</option>
-<option>Class 10</option>
-<option>Class 11</option>
-<option>Class 12</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-School Name
-</label>
-
-<input
-id="school"
-placeholder="School name">
-
-</div>
-
-
-<div>
-
-<label>
-Preferred Shift *
-</label>
-
-<select
-id="shift"
-required>
-
-<option value="">
-Select Shift
-</option>
-
-<option>Morning</option>
-<option>Day</option>
-<option>Evening</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Address
-</label>
-
-<input
-id="address"
-placeholder="Address">
-
-</div>
-
-
-<div>
-
-<label>
-Subjects Required
-</label>
-
-<input
-id="subjects"
-placeholder="e.g. Mathematics, Science">
-
-</div>
-
-
-<div class="full">
-
-<label>
-Message / Additional Information
-</label>
-
-<textarea
-id="message"
-placeholder="Write your message">
-</textarea>
-
-</div>
-
-
-<div class="full">
-
-<button
-class="btn red"
-type="submit">
-
-Submit Admission Form
-
-</button>
-
-</div>
-
-
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
+<section id="admission" class="section">
+    <div class="container">
+
+        <h2>Admission Form</h2>
+        <p class="section-subtitle">
+            Fill in the form below and submit your admission request directly.
+        </p>
+
+        <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="admission-form"
+            id="admissionForm"
+        >
+
+            <input
+                type="text"
+                name="student_name"
+                placeholder="Student Name"
+                required
+            >
+
+            <input
+                type="text"
+                name="parent_guardian"
+                placeholder="Parent / Guardian Name"
+                required
+            >
+
+            <input
+                type="tel"
+                name="mobile"
+                placeholder="Mobile Number"
+                required
+            >
+
+            <select name="class" required>
+                <option value="">Select Class</option>
+                <option>Class 1</option>
+                <option>Class 2</option>
+                <option>Class 3</option>
+                <option>Class 4</option>
+                <option>Class 5</option>
+                <option>Class 6</option>
+                <option>Class 7</option>
+                <option>Class 8</option>
+                <option>Class 9</option>
+                <option>Class 10 / SEE</option>
+                <option>Class 11</option>
+                <option>Class 12</option>
+            </select>
+
+            <input
+                type="text"
+                name="school"
+                placeholder="School Name"
+            >
+
+            <select name="preferred_shift" required>
+                <option value="">Preferred Shift</option>
+                <option>Morning</option>
+                <option>Day</option>
+                <option>Evening</option>
+            </select>
+
+            <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+            >
+
+            <input
+                type="text"
+                name="subjects"
+                placeholder="Subjects Required"
+            >
+
+            <textarea
+                name="message"
+                placeholder="Additional Message"
+                rows="5"
+            ></textarea>
+
+            <!-- Optional email field -->
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email Address"
+            >
+
+            <button type="submit" class="submit-btn">
+                Submit Admission Form
+            </button>
+
+            <p id="formStatus"></p>
+
+        </form>
+
+    </div>
 </section>
 
 
