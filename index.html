@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Everest Summit Coaching Classes</title>
+
+<meta name="description" content="Everest Summit Coaching Classes, Buddha Pokhari, Sanagaun, Lalitpur. Quality coaching for Classes 1 to 12.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.12);
+}
+
+nav{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#142b61;
+    font-weight:900;
+}
+
+.brand img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.brand small{
+    display:block;
+    color:#666;
+    font-size:10px;
+}
+
+.links{
+    display:flex;
+    gap:18px;
+    list-style:none;
+}
+
+.links a{
+    color:#172033;
+    font-weight:700;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#d51616;
+}
+
+.menu{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+
+    background:
+    linear-gradient(
+        rgba(7,27,70,.88),
+        rgba(7,27,70,.88)
+    ),
+    url("images/classroom-2.jpg")
+    center/cover no-repeat;
+}
+
+.hero-box{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero-logo{
+    width:155px;
+    height:155px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:50%;
+    padding:5px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin:20px 0 15px;
+}
+
+.hero h1 span{
+    color:#ffd33d;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:760px;
+    margin:0 auto 28px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    margin:5px;
+    border-radius:8px;
+    border:0;
+    cursor:pointer;
+    font-weight:800;
+    font-size:15px;
+    transition:.3s;
+}
+
+.red{
+    background:#d51616;
+    color:#fff;
+}
+
+.red:hover{
+    background:#a90000;
+    transform:translateY(-2px);
+}
+
+.gold{
+    background:#ffd33d;
+    color:#142b61;
+}
+
+.gold:hover{
+    background:#e9bb00;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:75px 0;
+}
+
+.light{
+    background:#f6f8fc;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.title h2{
+    font-size:36px;
+    color:#142b61;
+    margin-bottom:8px;
+}
+
+.title p{
+    color:#666;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+}
+
+.about h2{
+    font-size:34px;
+    color:#142b61;
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#555;
+    margin:12px 0;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 22px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#142b61;
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   CLASSES
+========================= */
+
+.classes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.class{
+    padding:23px;
+    text-align:center;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.class:hover{
+    background:#142b61;
+    color:#fff;
+    transform:translateY(-4px);
+}
+
+
+/* =========================
+   OFFER
+========================= */
+
+.offer{
+    background:#142b61;
+    color:#fff;
+    text-align:center;
+}
+
+.offer h2{
+    font-size:40px;
+}
+
+.discount{
+    font-size:75px;
+    font-weight:900;
+    color:#ffd33d;
+    margin:10px 0;
+}
+
+.offer p{
+    font-size:19px;
+}
+
+
+/* =========================
+   TEACHERS
+========================= */
+
+.teachers{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    max-width:850px;
+    margin:auto;
+}
+
+.teacher{
+    background:#f6f8fc;
+    border-radius:14px;
+    padding:35px;
+    text-align:center;
+    border:1px dashed #bbb;
+}
+
+.teacher-photo{
+    height:220px;
+    border-radius:12px;
+    background:#e9edf5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:270px;
+    border-radius:14px;
+    overflow:hidden;
+    background:#e9edf5;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-box{
+    max-width:650px;
+    margin:auto;
+    background:#fff;
+    padding:35px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.payment-box h2{
+    color:#142b61;
+}
+
+.payment-number{
+    font-size:32px;
+    font-weight:900;
+    color:#d51616;
+    margin:18px 0;
+}
+
+.payment-note{
+    color:#666;
+    margin:15px 0;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.box{
+    background:#f6f8fc;
+    padding:30px;
+    border-radius:14px;
+}
+
+.item{
+    margin:18px 0;
+}
+
+.item strong{
+    display:block;
+    color:#142b61;
+    margin-bottom:3px;
+}
+
+.item a{
+    color:#c00000;
+    font-weight:700;
+}
+
+.map{
+    display:inline-block;
+    background:#d51616;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:800;
+}
+
+
+/* =========================
+   ADMISSION FORM
+========================= */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+label{
+    display:block;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccd2dc;
+    border-radius:8px;
+    font:inherit;
+    background:#fff;
+}
+
+textarea{
+    min-height:115px;
+    resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#142b61;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101827;
+    color:#fff;
+    text-align:center;
+    padding:35px 15px;
+}
+
+footer h2{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.social{
+    margin:12px 0;
+}
+
+.social a{
+    color:#ffd33d;
+    margin:0 8px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.wa{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 5px 15px rgba(0,0,0,.10);
+    }
+
+    .links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .classes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero-logo{
+        width:120px;
+        height:120px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .title h2{
+        font-size:30px;
+    }
+
+    .about h2{
+        font-size:28px;
+    }
+
+    .teachers{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:240px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .discount{
+        font-size:58px;
+    }
+
+    .payment-number{
+        font-size:25px;
+    }
+
+    .classes{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav class="container">
+
+<a href="#home" class="brand">
+
+<img
+src="images/logo.jpg"
+alt="Everest Summit Coaching Classes Logo"
+>
+
+<div>
+EVEREST SUMMIT
+<small>COACHING CLASSES</small>
+</div>
+
+</a>
+
+
+<div class="menu" onclick="toggleMenu()">
+☰
+</div>
+
+
+<ul class="links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#teachers">Teachers</a></li>
+<li><a href="#offer">Offer</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#payment">Payment</a></li>
+<li><a href="#contact">Admission</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-box">
+
+<img
+class="hero-logo"
+src="images/logo.jpg"
+alt="Everest Summit Coaching Classes Logo"
+>
+
+<h1>
+Learn Better.
+<span>Achieve Higher.</span>
+</h1>
+
+<p>
+Quality coaching for Classes 1 to 12,
+taught by school-experienced teachers
+with new tips and tricks.
+</p>
+
+<a class="btn red" href="#contact">
+📝 Admission Enquiry
+</a>
+
+<a
+class="btn gold"
+target="_blank"
+rel="noopener"
+href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Classes+Buddha+Pokhari+Sanagaun+Lalitpur"
+>
+📍 View on Google Maps
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container about">
+
+<div>
+
+<img
+src="images/classroom-3.jpg"
+alt="Everest Summit Coaching Classes classroom"
+>
+
+</div>
+
+
+<div>
+
+<h2>
+Welcome to Everest Summit Coaching Classes
+</h2>
+
+<p>
+Everest Summit Coaching Classes provides
+coaching for <b>Classes 1 to 12</b>
+at Buddha Pokhari, Sanagaun, Lalitpur.
+</p>
+
+<p>
+We focus on clear concepts, regular practice,
+personal attention and effective teaching methods.
+</p>
+
+<p>
+<b>
+Taught by school-experienced teachers
+with new tips and tricks.
+</b>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="light">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Why Choose Us?</h2>
+
+<p>
+A focused learning environment for students.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+👨‍🏫 Experienced Teachers
+</h3>
+
+<p>
+School-experienced teachers guide
+students with practical teaching methods.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+💡 New Tips & Tricks
+</h3>
+
+<p>
+Simple techniques help students
+understand and practise difficult topics.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📚 Classes 1–12
+</h3>
+
+<p>
+Coaching is available for students
+from Class 1 through Class 12.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CLASSES
+========================= -->
+
+<section id="classes">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Classes We Offer</h2>
+
+<p>
+Quality coaching from Class 1 to Class 12
+</p>
+
+</div>
+
+
+<div class="classes">
+
+<div class="class">Class 1</div>
+<div class="class">Class 2</div>
+<div class="class">Class 3</div>
+<div class="class">Class 4</div>
+<div class="class">Class 5</div>
+<div class="class">Class 6</div>
+<div class="class">Class 7</div>
+<div class="class">Class 8</div>
+<div class="class">Class 9</div>
+<div class="class">Class 10</div>
+<div class="class">Class 11</div>
+<div class="class">Class 12</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     OFFER
+========================= -->
+
+<section class="offer" id="offer">
+
+<div class="container">
+
+<h2>
+Dashain & Tihar Special Admission Offer
+</h2>
+
+<div class="discount">
+30% OFF
+</div>
+
+<p>
+Take admission before Dashain and Tihar
+and receive a 30% admission discount.
+</p>
+
+<a
+class="btn gold"
+href="#contact"
+>
+Get Admission Information
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     TEACHERS
+========================= -->
+
+<section id="teachers">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Our Teachers</h2>
+
+<p>
+Teacher photos can be added later.
+</p>
+
+</div>
+
+
+<div class="teachers">
+
+<div class="teacher">
+
+<div class="teacher-photo">
+👨‍🏫
+</div>
+
+<h3>
+Experienced School Teacher
+</h3>
+
+<p>
+Concept-focused teaching
+with simple explanations.
+</p>
+
+</div>
+
+
+<div class="teacher">
+
+<div class="teacher-photo">
+👩‍🏫
+</div>
+
+<h3>
+Experienced School Teacher
+</h3>
+
+<p>
+Effective learning methods
+and practical tips.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="light" id="gallery">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Our Classroom & Centre
+</h2>
+
+<p>
+Take a look at Everest Summit Coaching Classes.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item">
+
+<img
+src="images/classroom-1.jpg"
+alt="Everest Summit Coaching Classes classroom"
+loading="lazy"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/classroom-2.jpg"
+alt="Everest Summit Coaching Classes building"
+loading="lazy"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/classroom-3.jpg"
+alt="Everest Summit Coaching Classes classroom"
+loading="lazy"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PAYMENT
+========================= -->
+
+<section id="payment">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+💳 Payment Method
+</h2>
+
+<p>
+Pay your admission fee through eSewa.
+</p>
+
+</div>
+
+
+<div class="payment-box">
+
+<h2>
+Pay via eSewa
+</h2>
+
+<p>
+Send your admission fee to:
+</p>
+
+<div class="payment-number">
+📱 9708050757
+</div>
+
+<p>
+<b>eSewa Number:</b>
+9708050757
+</p>
+
+<p class="payment-note">
+
+After making the payment, please keep
+your transaction receipt and contact us
+for confirmation.
+
+</p>
+
+<a
+class="btn red"
+href="tel:9708050757"
+>
+📞 Contact for Payment Confirmation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT & ADMISSION
+========================= -->
+
+<section class="light" id="contact">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Admission & Contact
+</h2>
+
+<p>
+Send your admission enquiry directly through WhatsApp.
+</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<!-- CONTACT -->
+
+<div class="box">
+
+<h2>
+Contact Details
+</h2>
+
+
+<div class="item">
+
+<strong>
+📍 Address
+</strong>
+
+Buddha Pokhari-06,
+Sanagaun, Lalitpur, Nepal
+
+</div>
+
+
+<div class="item">
+
+<strong>
+📞 Phone
+</strong>
+
+<a href="tel:+9779817682031">
++977 9817682031
+</a>
+
+<br>
+
+<a href="tel:+9779708050757">
++977 9708050757
+</a>
+
+</div>
+
+
+<div class="item">
+
+<strong>
+✉️ Gmail
+</strong>
+
+<a href="mailto:ssumedhpandit@gmail.com">
+ssumedhpandit@gmail.com
+</a>
+
+</div>
+
+
+<div class="item">
+
+<strong>
+💳 eSewa
+</strong>
+
+9708050757
+
+</div>
+
+
+<a
+class="map"
+target="_blank"
+rel="noopener"
+href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Classes+Buddha+Pokhari+Sanagaun+Lalitpur"
+>
+📍 Open Google Maps
+</a>
+
+</div>
+
+
+
+<!-- ADMISSION FORM -->
+
+<div class="box">
+
+<h2>
+📝 Admission Form
+</h2>
+
+
+<form onsubmit="sendAdmission(event)">
+
+<div class="form-grid">
+
+
+<div>
+
+<label>
+Student Full Name *
+</label>
+
+<input
+id="student"
+required
+placeholder="Student name"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Parent / Guardian Name *
+</label>
+
+<input
+id="parent"
+required
+placeholder="Parent / Guardian name"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Mobile Number *
+</label>
+
+<input
+id="phone"
+type="tel"
+required
+placeholder="98XXXXXXXX"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Student's Class *
+</label>
+
+<select id="className" required>
+
+<option value="">
+Select Class
+</option>
+
+<option>Class 1</option>
+<option>Class 2</option>
+<option>Class 3</option>
+<option>Class 4</option>
+<option>Class 5</option>
+<option>Class 6</option>
+<option>Class 7</option>
+<option>Class 8</option>
+<option>Class 9</option>
+<option>Class 10</option>
+<option>Class 11</option>
+<option>Class 12</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+School Name
+</label>
+
+<input
+id="school"
+placeholder="School name"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Preferred Shift *
+</label>
+
+<select id="shift" required>
+
+<option value="">
+Select Shift
+</option>
+
+<option>Morning</option>
+<option>Day</option>
+<option>Evening</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+Address
+</label>
+
+<input
+id="address"
+placeholder="Address"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Subjects Required
+</label>
+
+<input
+id="subjects"
+placeholder="e.g. Mathematics, Science"
+>
+
+</div>
+
+
+<div class="full">
+
+<label>
+Message / Additional Information
+</label>
+
+<textarea
+id="message"
+placeholder="Write your message"
+></textarea>
+
+</div>
+
+
+<div class="full">
+
+<button
+class="btn red"
+type="submit"
+>
+Send Admission Enquiry on WhatsApp
+</button>
+
+</div>
+
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>
+Everest Summit Coaching Classes
+</h2>
+
+<p>
+Buddha Pokhari-06,
+Sanagaun, Lalitpur, Nepal
+</p>
+
+<p>
+📧 ssumedhpandit@gmail.com
+|
+📞 +977 9817682031
+|
++977 9708050757
+</p>
+
+<p class="social">
+
+<a href="mailto:ssumedhpandit@gmail.com">
+Email
+</a>
+
+·
+
+<a href="tel:+9779817682031">
+Call
+</a>
+
+·
+
+<a
+target="_blank"
+rel="noopener"
+href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Classes+Buddha+Pokhari+Sanagaun+Lalitpur"
+>
+Maps
+</a>
+
+</p>
+
+<p>
+© 2026 Everest Summit Coaching Classes.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+class="wa"
+target="_blank"
+rel="noopener"
+href="https://wa.me/9779817682031"
+title="Chat on WhatsApp"
+>
+💬
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .querySelector(".links")
+    .classList
+    .toggle("show");
+
+}
+
+
+function sendAdmission(event){
+
+    event.preventDefault();
+
+    const student =
+    document.getElementById("student").value;
+
+    const parent =
+    document.getElementById("parent").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const className =
+    document.getElementById("className").value;
+
+    const school =
+    document.getElementById("school").value;
+
+    const shift =
+    document.getElementById("shift").value;
+
+    const address =
+    document.getElementById("address").value;
+
+    const subjects =
+    document.getElementById("subjects").value;
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const whatsappMessage =
+
+`Hello Everest Summit Coaching Classes,
+
+I want admission information.
+
+Student Name: ${student}
+
+Parent/Guardian: ${parent}
+
+Mobile: ${phone}
+
+Class: ${className}
+
+School: ${school}
+
+Preferred Shift: ${shift}
+
+Address: ${address}
+
+Subjects Required: ${subjects}
+
+Message: ${message}`;
+
+
+    const whatsappURL =
+    "https://wa.me/9779817682031?text="
+    + encodeURIComponent(whatsappMessage);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
