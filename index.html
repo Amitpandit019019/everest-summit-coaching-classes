@@ -1090,44 +1090,63 @@ href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Cl
 
 <!-- ADMISSION FORM -->
 
-<section id="admission" class="section">
-    <div class="container">
+    <form onsubmit="sendAdmission(event)">
 
-        <h2>Admission Form</h2>
-        <p class="section-subtitle">
-            Fill in the form below and submit your admission form request directly.
-        </p>
+    <div class="form-grid">
 
-        <form
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-            class="admission-form"
-            id="admissionForm"
-        >
+        <!-- STUDENT -->
+
+        <div class="form-section-title">
+            <span>👨‍🎓</span>
+            Student Information
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Student Full Name
+                <span class="required">*</span>
+            </label>
 
             <input
+                id="student"
                 type="text"
-                name="student_name"
-                placeholder="Student Name"
                 required
-            >
+                placeholder="Enter student's full name">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Parent / Guardian Name
+                <span class="required">*</span>
+            </label>
 
             <input
+                id="parent"
                 type="text"
-                name="parent_guardian"
-                placeholder="Parent / Guardian Name"
                 required
-            >
+                placeholder="Enter parent / guardian name">
 
-            <input
-                type="tel"
-                name="mobile"
-                placeholder="Mobile Number"
-                required
-            >
+        </div>
 
-            <select name="class" required>
-                <option value="">Select Class</option>
+
+        <div class="form-group">
+
+            <label>
+                Student's Class
+                <span class="required">*</span>
+            </label>
+
+            <select id="className" required>
+
+                <option value="">
+                    Choose class
+                </option>
+
                 <option>Class 1</option>
                 <option>Class 2</option>
                 <option>Class 3</option>
@@ -1137,63 +1156,296 @@ href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Cl
                 <option>Class 7</option>
                 <option>Class 8</option>
                 <option>Class 9</option>
-                <option>Class 10 / SEE</option>
+                <option>Class 10</option>
                 <option>Class 11</option>
                 <option>Class 12</option>
-                <option>Chinese Language Classes</option>
-                <option>English Language Classes </option>
-                <option>Other Subjects </option>
+
             </select>
 
-            <input
-                type="text"
-                name="school"
-                placeholder="School Name"
-            >
+        </div>
 
-            <select name="preferred_shift" required>
-                <option value="">Preferred Shift</option>
+
+        <div class="form-group">
+
+            <label>
+                School Name
+            </label>
+
+            <input
+                id="school"
+                type="text"
+                placeholder="Enter school name">
+
+        </div>
+
+
+        <!-- COURSE -->
+
+        <div class="form-section-title">
+
+            <span>📚</span>
+
+            Course Preferences
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Preferred Shift
+                <span class="required">*</span>
+            </label>
+
+            <select id="shift" required>
+
+                <option value="">
+                    Choose preferred shift
+                </option>
+
                 <option>Morning</option>
                 <option>Day</option>
                 <option>Evening</option>
+
             </select>
 
-            <input
-                type="text"
-                name="address"
-                placeholder="Address"
-                required
-            >
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Subjects Required
+            </label>
 
             <input
+                id="subjects"
                 type="text"
-                name="subjects"
-                placeholder="Subjects Required"
-            >
+                placeholder="e.g. Mathematics, Science">
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="form-section-title">
+
+            <span>📞</span>
+
+            Contact Information
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Mobile Number
+                <span class="required">*</span>
+            </label>
+
+            <input
+                id="phone"
+                type="tel"
+                required
+                pattern="[0-9]{10}"
+                placeholder="98XXXXXXXX">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Address
+            </label>
+
+            <input
+                id="address"
+                type="text"
+                placeholder="Enter your address">
+
+        </div>
+
+
+        <div class="form-group full">
+
+            <label>
+                Message / Additional Information
+            </label>
 
             <textarea
-                name="message"
-                placeholder="Additional Message"
-                rows="5"
-            ></textarea>
+                id="message"
+                placeholder="Tell us anything else we should know..."></textarea>
 
-            <!-- Optional email field -->
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email Address"
-            >
+        </div>
 
-            <button type="submit" class="submit-btn">
-                Submit Admission Form
+
+        <!-- SUBMIT -->
+
+        <div class="submit-area">
+
+            <button
+                class="admission-submit"
+                type="submit">
+
+                🚀 SUBMIT ADMISSION ENQUIRY
+
             </button>
 
-            <p id="formStatus"></p>
+            <div class="admission-note">
 
-        </form>
+                Your enquiry will be prepared for WhatsApp and email.
+
+            </div>
+
+            <div class="form-security">
+
+                🔒 Your information is used only for admission purposes.
+
+            </div>
+
+        </div>
 
     </div>
-</section>
+
+</form>
+
+
+<script>
+
+function sendAdmission(event) {
+
+    event.preventDefault();
+
+
+    /* GET FORM DATA */
+
+    const student =
+        document.getElementById("student").value.trim();
+
+    const parent =
+        document.getElementById("parent").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const className =
+        document.getElementById("className").value;
+
+    const school =
+        document.getElementById("school").value.trim();
+
+    const shift =
+        document.getElementById("shift").value;
+
+    const address =
+        document.getElementById("address").value.trim();
+
+    const subjects =
+        document.getElementById("subjects").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    /* ADMISSION MESSAGE */
+
+    const admissionMessage =
+
+`ADMISSION ENQUIRY
+Everest Summit Coaching Classes
+
+━━━━━━━━━━━━━━━━━━
+
+STUDENT INFORMATION
+
+Student Name: ${student}
+
+Parent / Guardian: ${parent}
+
+Class: ${className}
+
+School: ${school || "Not provided"}
+
+━━━━━━━━━━━━━━━━━━
+
+COURSE PREFERENCES
+
+Preferred Shift: ${shift}
+
+Subjects Required: ${subjects || "Not provided"}
+
+━━━━━━━━━━━━━━━━━━
+
+CONTACT INFORMATION
+
+Mobile Number: ${phone}
+
+Address: ${address || "Not provided"}
+
+Additional Information:
+${message || "None"}
+
+━━━━━━━━━━━━━━━━━━
+
+Everest Summit Coaching Classes
+Sanagaon, Lalitpur
+Contact: 9817682031
+Email: ssumedhpandit@gmail.com`;
+
+
+    /* WHATSAPP */
+
+    const whatsappNumber = "9779817682031";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(admissionMessage);
+
+
+    /* EMAIL */
+
+    const emailAddress =
+        "ssumedhpandit@gmail.com";
+
+    const emailSubject =
+        "New Admission Enquiry - " + student;
+
+    const emailURL =
+        "mailto:" +
+        emailAddress +
+        "?subject=" +
+        encodeURIComponent(emailSubject) +
+        "&body=" +
+        encodeURIComponent(admissionMessage);
+
+
+    /*
+       OPEN WHATSAPP
+    */
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+
+    /*
+       OPEN EMAIL
+    */
+
+    setTimeout(function() {
+
+        window.location.href = emailURL;
+
+    }, 700);
+
+}
+
+</script>
 
 
 <!-- ================= FOOTER ================= -->
