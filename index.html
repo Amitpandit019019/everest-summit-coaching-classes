@@ -1090,363 +1090,444 @@ href="https://www.google.com/maps/search/?api=1&query=Everest+Summit+Coaching+Cl
 
 <!-- ADMISSION FORM -->
 
-    <form onsubmit="sendAdmission(event)">
-
-    <div class="form-grid">
-
-        <!-- STUDENT -->
-
-        <div class="form-section-title">
-            <span>👨‍🎓</span>
-            Student Information
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Student Full Name
-                <span class="required">*</span>
-            </label>
-
-            <input
-                id="student"
-                type="text"
-                required
-                placeholder="Enter student's full name">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Parent / Guardian Name
-                <span class="required">*</span>
-            </label>
-
-            <input
-                id="parent"
-                type="text"
-                required
-                placeholder="Enter parent / guardian name">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Student's Class
-                <span class="required">*</span>
-            </label>
-
-            <select id="className" required>
-
-                <option value="">
-                    Choose class
-                </option>
-
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                School Name
-            </label>
-
-            <input
-                id="school"
-                type="text"
-                placeholder="Enter school name">
-
-        </div>
-
-
-        <!-- COURSE -->
-
-        <div class="form-section-title">
-
-            <span>📚</span>
-
-            Course Preferences
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Preferred Shift
-                <span class="required">*</span>
-            </label>
-
-            <select id="shift" required>
-
-                <option value="">
-                    Choose preferred shift
-                </option>
-
-                <option>Morning</option>
-                <option>Day</option>
-                <option>Evening</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Subjects Required
-            </label>
-
-            <input
-                id="subjects"
-                type="text"
-                placeholder="e.g. Mathematics, Science">
-
-        </div>
-
-
-        <!-- CONTACT -->
-
-        <div class="form-section-title">
-
-            <span>📞</span>
-
-            Contact Information
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Mobile Number
-                <span class="required">*</span>
-            </label>
-
-            <input
-                id="phone"
-                type="tel"
-                required
-                pattern="[0-9]{10}"
-                placeholder="98XXXXXXXX">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Address
-            </label>
-
-            <input
-                id="address"
-                type="text"
-                placeholder="Enter your address">
-
-        </div>
-
-
-        <div class="form-group full">
-
-            <label>
-                Message / Additional Information
-            </label>
-
-            <textarea
-                id="message"
-                placeholder="Tell us anything else we should know..."></textarea>
-
-        </div>
-
-
-        <!-- SUBMIT -->
-
-        <div class="submit-area">
-
-            <button
-                class="admission-submit"
-                type="submit">
-
-                🚀 SUBMIT ADMISSION ENQUIRY
-
-            </button>
-
-            <div class="admission-note">
-
-                Your enquiry will be prepared for WhatsApp and email.
-
-            </div>
-
-            <div class="form-security">
-
-                🔒 Your information is used only for admission purposes.
-
-            </div>
-
-        </div>
+    
+           <section class="admission-section" id="admission">
+
+<style>
+.admission-section{
+    padding:90px 20px;
+    background:
+        radial-gradient(circle at 10% 20%,rgba(0,153,255,.18),transparent 30%),
+        radial-gradient(circle at 90% 80%,rgba(0,212,255,.15),transparent 30%),
+        linear-gradient(135deg,#031638,#075db5);
+}
+
+.admission-wrapper{
+    max-width:1050px;
+    margin:auto;
+}
+
+.admission-heading{
+    text-align:center;
+    color:white;
+    margin-bottom:45px;
+}
+
+.admission-heading .small-title{
+    display:inline-block;
+    padding:7px 16px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    color:#66d9ff;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.admission-heading h2{
+    font-size:42px;
+    margin:15px 0 10px;
+}
+
+.admission-heading p{
+    max-width:650px;
+    margin:auto;
+    color:#d7eaff;
+}
+
+.admission-card{
+    background:rgba(255,255,255,.97);
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.form-top{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+.form-section-title{
+    grid-column:1/-1;
+    font-size:20px;
+    color:#062052;
+    font-weight:bold;
+    border-left:4px solid #0799ef;
+    padding-left:12px;
+    margin-bottom:3px;
+}
+
+.form-group{
+    position:relative;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    color:#26364d;
+    margin-bottom:8px;
+}
+
+.form-group label span{
+    color:#ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    background:#f8fbff;
+    color:#18283d;
+    font-size:15px;
+    outline:none;
+    transition:.25s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#0799ef;
+    background:white;
+    box-shadow:0 0 0 4px rgba(7,153,239,.10);
+}
+
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-note{
+    background:#eef8ff;
+    border:1px solid #d7edff;
+    border-radius:12px;
+    padding:14px 16px;
+    color:#38526e;
+    font-size:13px;
+    margin:5px 0 25px;
+}
+
+.submit-area{
+    text-align:center;
+    margin-top:10px;
+}
+
+.submit-button{
+    width:100%;
+    border:none;
+    padding:16px 25px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#087de0,#00b9f5);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,126,220,.25);
+}
+
+.submit-button:hover{
+    background:linear-gradient(135deg,#0569c0,#00a8dc);
+}
+
+.submit-note{
+    margin-top:12px;
+    color:#718096;
+    font-size:12px;
+}
+
+@media(max-width:700px){
+
+    .admission-section{
+        padding:65px 15px;
+    }
+
+    .admission-heading h2{
+        font-size:32px;
+    }
+
+    .admission-card{
+        padding:25px 20px;
+        border-radius:18px;
+    }
+
+    .form-top{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .form-section-title{
+        grid-column:auto;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+}
+</style>
+
+
+<div class="admission-wrapper">
+
+    <div class="admission-heading">
+
+        <span class="small-title">
+            Admissions Open
+        </span>
+
+        <h2>Start Your Learning Journey</h2>
+
+        <p>
+            Fill out the admission form below and our team will
+            contact you with further information.
+        </p>
 
     </div>
 
-</form>
+
+    <div class="admission-card">
+
+        <form
+            action="https://formspree.io/f/myezwyjy"
+            method="POST"
+        >
+
+            <div class="form-top">
+
+                <div class="form-section-title">
+                    Student Information
+                </div>
 
 
-<script>
+                <div class="form-group">
 
-function sendAdmission(event) {
+                    <label>
+                        Student Name <span>*</span>
+                    </label>
 
-    event.preventDefault();
+                    <input
+                        type="text"
+                        name="student_name"
+                        placeholder="Enter student's full name"
+                        required
+                    >
 
-
-    /* GET FORM DATA */
-
-    const student =
-        document.getElementById("student").value.trim();
-
-    const parent =
-        document.getElementById("parent").value.trim();
-
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const className =
-        document.getElementById("className").value;
-
-    const school =
-        document.getElementById("school").value.trim();
-
-    const shift =
-        document.getElementById("shift").value;
-
-    const address =
-        document.getElementById("address").value.trim();
-
-    const subjects =
-        document.getElementById("subjects").value.trim();
-
-    const message =
-        document.getElementById("message").value.trim();
+                </div>
 
 
-    /* ADMISSION MESSAGE */
+                <div class="form-group">
 
-    const admissionMessage =
+                    <label>
+                        Date of Birth
+                    </label>
 
-`ADMISSION ENQUIRY
-Everest Summit Coaching Classes
+                    <input
+                        type="date"
+                        name="date_of_birth"
+                    >
 
-━━━━━━━━━━━━━━━━━━
-
-STUDENT INFORMATION
-
-Student Name: ${student}
-
-Parent / Guardian: ${parent}
-
-Class: ${className}
-
-School: ${school || "Not provided"}
-
-━━━━━━━━━━━━━━━━━━
-
-COURSE PREFERENCES
-
-Preferred Shift: ${shift}
-
-Subjects Required: ${subjects || "Not provided"}
-
-━━━━━━━━━━━━━━━━━━
-
-CONTACT INFORMATION
-
-Mobile Number: ${phone}
-
-Address: ${address || "Not provided"}
-
-Additional Information:
-${message || "None"}
-
-━━━━━━━━━━━━━━━━━━
-
-Everest Summit Coaching Classes
-Sanagaon, Lalitpur
-Contact: 9817682031
-Email: ssumedhpandit@gmail.com`;
+                </div>
 
 
-    /* WHATSAPP */
+                <div class="form-group">
 
-    const whatsappNumber = "9779817682031";
+                    <label>
+                        Parent / Guardian Name <span>*</span>
+                    </label>
 
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(admissionMessage);
+                    <input
+                        type="text"
+                        name="parent_guardian"
+                        placeholder="Enter parent or guardian name"
+                        required
+                    >
 
-
-    /* EMAIL */
-
-    const emailAddress =
-        "ssumedhpandit@gmail.com";
-
-    const emailSubject =
-        "New Admission Enquiry - " + student;
-
-    const emailURL =
-        "mailto:" +
-        emailAddress +
-        "?subject=" +
-        encodeURIComponent(emailSubject) +
-        "&body=" +
-        encodeURIComponent(admissionMessage);
+                </div>
 
 
-    /*
-       OPEN WHATSAPP
-    */
+                <div class="form-group">
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+                    <label>
+                        Contact Number <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="98XXXXXXXX"
+                        required
+                    >
+
+                </div>
 
 
-    /*
-       OPEN EMAIL
-    */
+                <div class="form-section-title">
+                    Academic Information
+                </div>
 
-    setTimeout(function() {
 
-        window.location.href = emailURL;
+                <div class="form-group">
 
-    }, 700);
+                    <label>
+                        Applying For <span>*</span>
+                    </label>
 
-}
+                    <select name="class" required>
 
-</script>
+                        <option value="">
+                            Select Class / Program
+                        </option>
 
+                        <option>Class 1</option>
+                        <option>Class 2</option>
+                        <option>Class 3</option>
+                        <option>Class 4</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                        <option>Class 9</option>
+                        <option>SEE Preparation</option>
+                        <option>Plus2 Science</option>
+                        <option>Plus2 Management</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred Shift <span>*</span>
+                    </label>
+
+                    <select name="preferred_shift" required>
+
+                        <option value="">
+                            Select Preferred Shift
+                        </option>
+
+                        <option>Morning</option>
+                        <option>Day (11:00 AM – 3:00 PM)</option>
+                        <option>Evening</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Previous School / College
+                    </label>
+
+                    <input
+                        type="text"
+                        name="previous_institution"
+                        placeholder="Enter previous school / college"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Previous Grade / GPA
+                    </label>
+
+                    <input
+                        type="text"
+                        name="previous_grade"
+                        placeholder="Example: A / 3.60 GPA"
+                    >
+
+                </div>
+
+
+                <div class="form-section-title">
+                    Additional Information
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Address
+                    </label>
+
+                    <input
+                        type="text"
+                        name="address"
+                        placeholder="Enter your current address"
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Message / Requirements
+                    </label>
+
+                    <textarea
+                        name="message"
+                        placeholder="Tell us anything you would like us to know..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-note">
+
+                <strong>📌 Note:</strong>
+                Please provide accurate information.
+                Our team will contact you regarding your admission enquiry.
+
+            </div>
+
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Submit Admission Application
+                </button>
+
+                <div class="submit-note">
+                    Your information will be securely submitted
+                    through our online admission system.
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section> 
+            
+
+            
 
 <!-- ================= FOOTER ================= -->
 
